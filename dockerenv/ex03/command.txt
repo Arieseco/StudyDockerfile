@@ -1,0 +1,6 @@
+# イメージのビルド
+docker image build -t ex03/nginx:1.0 .
+# コンテナの起動
+docker run --name ex03_websv -d --rm -p 8080:80 ex03/nginx:1.0
+# コンテナの停止
+docker container stop ex03_websv
