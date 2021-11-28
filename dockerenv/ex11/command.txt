@@ -1,0 +1,35 @@
+# サービスの起動
+docker-compose up
+
+# サービスの削除
+docker-compose down --rmi all
+
+# バックグラウンドでサービス起動
+docker-compose up -d
+
+# Dockerfileを変更した場合の再起動
+docker-compose up -d -build
+
+# 起動中のコンテナでコマンド実行
+docker-compose exec python /bin/bash
+
+# ログの表示 --tail="行数" 最後から"行数"ぶんのログを表示
+docker-compose logs --tail="5" db
+
+# コンテナの一覧を表示
+docker-compose ps
+
+# サービスの停止
+docker-compose stop
+
+# サービスの開始
+docker-compose start
+
+# イメージのビルド
+docker-compose build []
+
+# コンテナの作成
+docker-compose create []
+
+# コンテナの起動
+docker-compose run []
